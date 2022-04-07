@@ -1,0 +1,45 @@
+#### One-to-One Relationship ****
+- ***Definition:*** a relationship where one record on a table matches with one record on another table.
+- ***Example:*** users and user_details
+- ***Common strategy to implement:*** the owner table of the relationship should have a foreign key to the non-owner.
+​
+#### One-to-Many Relationship ****
+​
+- ***Definition:*** a relationship where one record on a table matches with several records on another table.
+- ***Example:*** users and posts
+- ***Common strategy to implement:*** the table on the many side should have a foreign key pointing to the single owner from the owning-side table.
+​
+#### Many-to-Many Relationship ****
+​
+- ***Definition:*** a relationship where one record on a table matches with several records on another table and a record on the other table matches with several records on the first table.
+- ***Example:*** users and events
+- ***Common strategy to implement:*** neither table should have a foreign key to the other and instead, an associative (join) table should be used to link the two together via two foreign key columns, each linking to a primary key of both tables in the many-to-many relationship.
+​
+
+Mini-exercise [DB Design] - ‘Which relationship worksheet?’
+Open up something to write with or get something to write with IRL. .
+Riddle me this: what would be the best relationship and why?
+  - in a dating app: users and user_profiles
+  - in an online marketplace: orders and products
+  - in a blog application: users and posts
+  - in a social media app: users and groups
+  - in an app for professional networking: businesses and addresses
+  - in a dog walking app: pet_records and pet_owners
+
+  Dating app - One to One
+
+
+  Online marketplace - many to many
+
+
+  blog - one to many
+
+
+  social media - one to many
+
+
+  professional networking - one to many
+
+
+  dog walking app - many to many
+
