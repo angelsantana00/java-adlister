@@ -4,7 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import com.mysql.cj.jdbc.Driver;
-import javax.servlet.jsp.jstl.core.Config;
+import com.codeup.adlister.Config;
 
 
 public class MySQLAdsDao implements Ads {

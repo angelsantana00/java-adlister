@@ -1,11 +1,21 @@
 package com.codeup.adlister.dao;
 
-import javax.servlet.jsp.jstl.core.Config;
+import com.codeup.adlister.Config;
+
+import java.sql.SQLException;
 
 public class DaoFactory {
     private static Ads adsDao;
     private static Users usersDao;
-    private static Config config = new Config();
+    private static Config config;
+
+    static {
+        try {
+            config = new Config();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
     public static Ads getAdsDao() {
         if (adsDao == null) {
